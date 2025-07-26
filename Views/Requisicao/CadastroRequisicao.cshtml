@@ -1,0 +1,45 @@
+@{
+    Layout = "_Layout";
+    @model DistribuidoraProdutos.Models.Requisicao
+}
+
+<div class="container">
+    <form action="IncluirRequisicao" method="post">
+        <button type="submit" class="btn btn-primary">
+            Salvar
+        </button>
+
+        <div class="col-10">
+            <div class="row">
+                <div class="col">
+                    <label asp-for="Data" class="form-label">Data</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        asp-for="Data"
+                    />
+                </div>
+
+                <div class="col">
+                    <label asp-for="Situacao" class="form-label">Situação</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        asp-for="Situacao"
+                    />
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <div class="col">
+                    <label asp-for="FornecedorMatricula" class="form-label">Matrícula do Fornecedor</label>
+                    <input
+                        type="number"
+                        class="form-control"
+                        asp-for="FornecedorMatricula"
+                    />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

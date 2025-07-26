@@ -1,0 +1,44 @@
+@{
+    Layout = "_Layout";
+    @model DistribuidoraProdutos.Models.Fatura
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Cadastrar Fatura</h2>
+
+    <form asp-action="Cadastrar" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+        <div class="mb-3">
+            <label asp-for="NumeroFatura" class="form-label">Número da Fatura</label>
+            <input asp-for="NumeroFatura" class="form-control" />
+            <span asp-validation-for="NumeroFatura" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Valor" class="form-label">Valor</label>
+            <input asp-for="Valor" class="form-control" />
+            <span asp-validation-for="Valor" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Situacao" class="form-label">Situação</label>
+            <input asp-for="Situacao" class="form-control" />
+            <span asp-validation-for="Situacao" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="RequisicaoNumero" class="form-label">Número da Requisição</label>
+            <input asp-for="RequisicaoNumero" class="form-control" />
+            <span asp-validation-for="RequisicaoNumero" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="FornecedorMatricula" class="form-label">Matrícula do Fornecedor</label>
+            <input asp-for="FornecedorMatricula" class="form-control" />
+            <span asp-validation-for="FornecedorMatricula" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+</div>

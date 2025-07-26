@@ -1,0 +1,54 @@
+@{
+    Layout = "_Layout";
+    @model DistribuidoraProdutos.Models.ItemPedido
+}
+
+<div class="container">
+    <form action="IncluirItemPedido" method="post">
+        <button type="submit" class="btn btn-primary">
+            Salvar
+        </button>
+
+        <div class="col-10">
+            <div class="row">
+                <div class="col">
+                    <label asp-for="Quantidade" class="form-label">Quantidade</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        asp-for="Quantidade"
+                    />
+                </div>
+
+                <div class="col">
+                    <label asp-for="SituacaoItem" class="form-label">Situação do Item</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        asp-for="SituacaoItem"
+                    />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label asp-for="PedidoNumero" class="form-label">Número do Pedido</label>
+                    <input
+                        type="number"
+                        class="form-control"
+                        asp-for="PedidoNumero"
+                    />
+                </div>
+
+                <div class="col">
+                    <label asp-for="ProdutoCodigo" class="form-label">Código do Produto</label>
+                    <input
+                        type="number"
+                        class="form-control"
+                        asp-for="ProdutoCodigo"
+                    />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

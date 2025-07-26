@@ -1,0 +1,12 @@
+@{
+    /*Neste arquivo importamos todos os namespace do projeto
+    que serão utilizados nas páginas da aplicação. 
+    Desta forma, não precisamos ficar importando as classes
+    nessas Páginas. Importante: Esse recurso funciona 
+    SOMENTE nos arquivos com a extensão .cshtml*/
+    @using DistribuidoraProdutos.Models
+    @using DistribuidoraProdutos.Data
+    /*Permite utilizar os componentes nativos do Asp.NET
+    nas páginas .cshtml*/
+    @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+}

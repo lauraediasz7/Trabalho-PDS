@@ -1,0 +1,85 @@
+@{
+    Layout = "_Layout";
+    @model DistribuidoraProdutos.Models.Cliente
+}
+
+<div class="container">
+    <form action="IncluirCliente" method="post">
+        <button type="submit" class="btn btn-primary">
+            Salvar
+        </button>
+
+        <div class="col-10">
+            <div class="row">
+                <div class="col">
+                    <label asp-for="Nome" class="form-label">Nome</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        asp-for="Nome"
+                    />
+                </div>
+
+                <div class="col-5">
+                    <label asp-for="Cpf_cgc" class="form-label">CPF/CNPJ</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        asp-for="Cpf_cgc"
+                    />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label asp-for="Endereco" class="form-label">Endereço</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        asp-for="Endereco"
+                    />
+                </div>
+
+                <div class="col-3">
+                    <label asp-for="Telefone" class="form-label">Telefone</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        asp-for="Telefone"
+                    />
+                </div>
+            </div>
+
+            <!-- Terceira linha -->
+            <div class="row">
+                <div class="col">
+                    <label asp-for="NomeContato" class="form-label">Nome do Contato</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        asp-for="NomeContato"
+                    />
+                </div>
+
+                <div class="col">
+                    <label asp-for="CartaoCredito" class="form-label">Cartão de Crédito</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        asp-for="CartaoCredito"
+                    />
+                </div>
+
+                <div class="col">
+                    <label asp-for="Email" class="form-label">Email</label>
+                    <input
+                        type="email"
+                        class="form-control"
+                        asp-for="Email"
+                    />
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
